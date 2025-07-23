@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Uber Help</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../assets/styles/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f8f8f8;
+    }
+
+    .navbar {
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .navbar .left {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .navbar .right {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      font-size: 0.9rem;
+    }
+
+    .help-header {
+      background: #fff;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #ccc;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+      color: #000;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1.5rem;
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .card {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card i {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="left">Uber</div>
+    <div class="right">
+      <span>🌐 EN</span>
+      <span>👤 <a href="./login.html" style="color: #fff; text-decoration: underline;">Log in</a></span>
+    </div>
+  </div>
+
+  <div class="help-header">Help</div>
+
+  <div class="hero">
+    <h1>Welcome to Uber Support</h1>
+    <p>
+      We’re here to help. Looking for customer service contact information? Explore support resources for the relevant products below to find the best way to reach out about your issue.
+    </p>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <i>🚗</i>
+      <p>Riders</p>
+    </div>
+    <div class="card">
+      <i>🛵</i>
+      <p>Driving & Delivering</p>
+    </div>
+    <div class="card">
+      <i>🍔</i>
+      <p>Uber Eats</p>
+    </div>
+    <div class="card">
+      <i>🏪</i>
+      <p>Merchants & Restaurants</p>
+    </div>
+    <div class="card">
+      <i>🛴</i>
+      <p>Bikes & Scooters</p>
+    </div>
+    <div class="card">
+      <i>💼</i>
+      <p>Uber for Business</p>
+    </div>
+    <div class="card">
+      <i>🚚</i>
+      <p>Freight</p>
+    </div>
+  </div>
+
+</body>
+</html>

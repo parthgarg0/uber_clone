@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - Uber Clone</title>
+    <link rel="stylesheet" href="../assets/styles/style.css" />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #f2f2f2;
+        font-family: sans-serif;
+      }
+
+      .signup-container {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 450px;
+      }
+
+      .signup-container h2 {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+
+      .signup-container input {
+        width: 100%;
+        padding: 12px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 1rem;
+      }
+
+      .signup-container button {
+        width: 100%;
+        padding: 12px;
+        background: black;
+        color: white;
+        border: none;
+        font-size: 1rem;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      .signup-container button:hover {
+        background: #333;
+      }
+
+      .signup-container .links {
+        text-align: center;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+      }
+
+      .signup-container .links a {
+        color: #000;
+        text-decoration: underline;
+      }
+
+      .error,
+      .success {
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
+        text-align: center;
+        display: none;
+      }
+
+      .error {
+        color: red;
+      }
+
+      .success {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="signup-container">
+      <h2>Create your Uber Account</h2>
+      <form id="signupForm"  method="POST" action="Sin.php">
+        <input type="text" name="full_name" id="name" placeholder="Full Name" required />
+        <input type="email" id="email" name="email" placeholder="Email" required />
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Password (min 6 characters)"
+          required
+        />
+        <input
+          type="password"
+          id="confirmPassword"
+          placeholder="Confirm Password"
+          required
+        />
+        <p class="error" id="errorMsg"></p>
+        <p class="success" id="successMsg">✅ Account created! Redirecting...</p>
+        <button type="submit" name="submit">Sign Up</button>
+      </form>
+      <div class="links">
+        <p>Already have an account? <a href="./login.html">Log in</a></p>
+      </div>
+    </div>
+
+
+    <script>
+      const form = document.getElementById("signupForm");
+      const errorMsg = document.getElementById("errorMsg");
+      const successMsg = document.getElementById("successMsg");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value.trim();
+        const confirmPassword =
+          document.getElementById("confirmPassword").value.trim();
+
+        if (!name || !email || !password || !confirmPassword) {
+          errorMsg.innerText = "All fields are required.";
+          errorMsg.style.display = "block";
+          successMsg.style.display = "none";
+          return;
+        }
+
+        if (password.length < 6) {
+          errorMsg.innerText = "Password must be at least 6 characters.";
+          errorMsg.style.display = "block";
+          successMsg.style.display = "none";
+          return;
+        }
+
+        if (password !== confirmPassword) {
+          errorMsg.innerText = "Passwords do not match.";
+          errorMsg.style.display = "block";
+          successMsg.style.display = "none";
+          return;
+        }
+
+        // Simulate success
+        errorMsg.style.display = "none";
+        successMsg.style.display = "block";
+
+        // Redirect to login after 2 seconds
+        setTimeout(() => {
+          window.location.href = "./login.html";
+        }, 2000);
+      });
+    </script>
+  
+</body>
+
+
+</html>

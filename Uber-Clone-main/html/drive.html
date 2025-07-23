@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Drive with Uber</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 20px; }
+    .container { max-width: 600px; margin: auto; }
+    input, select, button { width: 100%; padding: 10px; margin: 10px 0; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Drive with Us</h2>
+    <form id="driveForm">
+      <label>Full Name</label>
+      <input type="text" id="name" required />
+
+      <label>Vehicle Number</label>
+      <input type="text" id="vehicleNumber" required />
+
+      <label>License Number</label>
+      <input type="text" id="license" required />
+
+      <button type="submit">Register as Driver</button>
+    </form>
+
+    <p id="driverInfo"></p>
+  </div>
+
+  <script>
+    document.getElementById("driveForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      const vehicle = document.getElementById("vehicleNumber").value;
+      const license = document.getElementById("license").value;
+
+      document.getElementById("driverInfo").innerText = 
+        `${name} registered with vehicle ${vehicle} and license ${license}`;
+    });
+  </script>
+</body>
+</html>

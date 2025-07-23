@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ride with Uber</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 20px; }
+    .container { max-width: 600px; margin: auto; }
+    input, select, button { width: 100%; padding: 10px; margin: 10px 0; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Book a Ride</h2>
+    <form id="rideForm">
+      <label>Pickup Location</label>
+      <input type="text" id="pickup" required />
+
+      <label>Destination</label>
+      <input type="text" id="drop" required />
+
+      <label>Select Vehicle Type</label>
+      <select id="vehicle">
+        <option value="uberX">UberX</option>
+        <option value="uberXL">UberXL</option>
+        <option value="lux">Luxury</option>
+      </select>
+
+      <button type="submit">Book Ride</button>
+    </form>
+
+    <p id="rideDetails"></p>
+  </div>
+
+  <script>
+    document.getElementById("rideForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const pickup = document.getElementById("pickup").value;
+      const drop = document.getElementById("drop").value;
+      const vehicle = document.getElementById("vehicle").value;
+
+      document.getElementById("rideDetails").innerText = 
+        `Ride booked from ${pickup} to ${drop} via ${vehicle.toUpperCase()}`;
+    });
+  </script>
+</body>
+</html>

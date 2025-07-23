@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer src="script.js"></script>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://d3i4yxtzktqr9n.cloudfront.net/uber-sites/99c4bc580c8b57b7.ico"
+    />
+    <title>Uber Clone</title>
+  </head>
+  <body>
+    <header class="bg-dark">
+      <div class="container">
+        <nav>
+          <div>
+            <a href="./index.html" class="logo">Uber</a>
+            <ul class="nav-links">
+              <li><a href="./html/ride.html">Ride</a></li>
+              <li><a href="./html/drive.html">Drive</a></li>
+              <li><a href="./html/help.html">Help</a></li>
+            </ul>
+          </div>
+          <div>
+            <ul id="nav-links" class="nav-links">
+              <li><a href="./index.html">EN-EN</a></li>
+              <li><a href="./index.html">Products</a></li>
+              <li><a href="./html/login.html">Log in</a></li>
+              <li><a href="html/signup.html" class="nav__cta">Sign up</a></li>
+            </ul>
+          </div>
+          <div class="hamburger">
+            <span class="hamburger-bar"></span
+            ><span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+    
+    <section id="main__cta">
+      <div class="container">
+        <div class="split">
+          <div class="main__cta__rectangle bg-light" style="flex: 1; padding: 20px;">
+            <div style="margin-bottom: 30px;">
+              <h1 style="font-size: 36px; font-weight: bold;">Go anywhere with Uber</h1>
+            </div>
+    
+            <div style="display: flex; gap: 20px; margin-bottom: 20px;">
+              <div style="text-align: center;">
+                <div style="background: #eeeeee; padding: 10px; border-radius: 10px;">
+                  <img src="https://img.icons8.com/ios-filled/24/000000/car--v1.png" />
+                  <div style="font-weight: bold;">Ride</div>
+                </div>
+              </div>
+              <div style="text-align: center;">
+                <div style="background: #f9f9f9; padding: 10px; border-radius: 10px;">
+                  <img src="https://img.icons8.com/ios/24/000000/parcel.png" />
+                  <div style="color: #888;">Courier</div>
+                </div>
+              </div>
+            </div>
+
+
+            <form method="POST" action="place.php">
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+              <div style="position: relative;">
+                <input type="text" placeholder="Pickup location" name="Pickup" style="width: 100%; padding: 12px 40px 12px 12px; border-radius: 8px; border: none; background: #f3f3f3;" />
+                <span style="position: absolute; right: 12px; top: 12px;">
+                  <img src="https://img.icons8.com/ios-filled/20/000000/near-me.png"/>
+                </span>
+              </div>
+              <div>
+                <input type="text" placeholder="Dropoff location" name="Dropoff" style="width: 100%; padding: 12px; border-radius: 8px; border: none; background: #f3f3f3;" />
+              </div>
+              <div style="flex: 1; background: #f3f3f3; border-radius: 8px; padding: 12px; display: flex; align-items: center; gap: 10px;">
+                <img src="https://img.icons8.com/ios-filled/20/000000/calendar.png" />
+                <input type="date" name="date" style="border: none; background: transparent; font-size: 16px; width: 50%;" />
+              </div>
+              <div style="flex: 1; background: #f3f3f3; border-radius: 8px; padding: 12px; display: flex; align-items: center; gap: 10px;">
+                <img src="https://img.icons8.com/ios-filled/20/000000/clock.png" />
+                <input type="time" name="time" style="border: none; background: transparent; font-size: 16px; width: 50%;" />
+                <span style="margin-left: auto;">&#9662;</span>
+              </div>
+              
+              </div>
+              <div style="display: flex; gap: 12px; margin-top: 10px;">
+                <button style="flex: 1; background: black; color: white; padding: 12px; border-radius: 8px; border: none; font-weight: bold;">See prices</button>
+                <a href="./html/login.html" style="flex: 1; text-align: center; padding: 12px; color: black; text-decoration: underline;">Log in to see your recent activity</a>
+              </div>
+            </div>
+          </div>
+        </form>
+          <div style="flex: 1;">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224345.83929834992!2d77.06889932133737!3d28.527252739385095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce39879e61999%3A0xf63f1da1ba5221ac!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1619781449870!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style="border:0; min-height: 500px; border-radius: 12px;"
+              allowfullscreen=""
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="business-header">
+      <div class="container">
+        <div class="business-header__text">
+          <h3>Uber for Business</h3>
+          <p>
+            Change the way your employees move and dine.
+          </p>
+          <a href="#" class="btn">Discover how</a>
+        </div>
+      </div>
+    </section>
+
+    <section data-aos="zoom-in" id="engagements__section" class="bg-light">
+      <div class="container">
+        <h3>Wherever you go, your safety is our priority</h3>
+        <div class="split">
+          <div class="engagements__section__flex">
+            <img
+              src="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_558,h_372/v1613520218/assets/3e/e98625-31e6-4536-8646-976a1ee3f210/original/Safety_Home_Img2x.png"
+              alt=""
+            />
+            <h4>Our commitment to your safety</h4>
+            <p class="sous-titre">
+              Each of our safety features and rules in our Community Guidelines
+              contributes to creating a safe environment for our users.
+            </p>
+            <a href="#" class="text-cta"
+              >Discover our Community Guidelines</a
+            >
+            <a href="#" class="text-cta"
+              >See all safety features</a
+            >
+          </div>
+          <div class="engagements__section__flex">
+            <img
+              src="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_558,h_372/v1613520285/assets/c2/91ea9c-90d7-4c36-a740-d7844536694e/original/Cities_Home_Img2x.png"
+              alt=""
+            />
+            <h4>We move over 10,000 cities</h4>
+            <p class="sous-titre">
+              With the app available in thousands of cities worldwide, you can
+              also order rides when you're far from home.
+            </p>
+            <a href="#" class="text-cta" title="View all cities"
+              >View all cities</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section data-aos="fade-up" id="infos__section" class="bg-light">
+      <div class="container">
+        <div class="split">
+          <div class="infos__section__card">
+            <img
+              src="https://www.uber-assets.com/image/upload/q_auto:eco,c_fill,w_24,h_24/v1542256135/assets/dd/c53d7b-8921-4dc7-93f4-45fb59f4ffb9/original/person-multiple-outlined.svg"
+              alt=""
+            />
+            <p class="titre">About Us</p>
+            <p class="sous-titre">
+              Discover our story, motivations, and world of opportunities.
+            </p>
+            <a href="#" class="text-cta">Learn more</a>
+          </div>
+          <div class="infos__section__card">
+            <img
+              src="https://www.uber-assets.com/image/upload/q_auto:eco,c_fill,w_24,h_24/v1542254244/assets/eb/68c631-5041-4eeb-9114-80048a326782/original/document-outlined.svg"
+              alt=""
+            />
+            <p class="titre">Press Room</p>
+            <p class="sous-titre">
+              Follow news about our features, initiatives, and partnerships.
+            </p>
+            <a href="#" class="text-cta">Learn more</a>
+          </div>
+          <div class="infos__section__card">
+            <img
+              src="https://www.uber-assets.com/image/upload/q_auto:eco,c_fill,w_24,h_24/v1542255370/assets/64/58118a-0ece-4f80-93ee-8041b53593d5/original/home-outlined.svg"
+              alt=""
+            />
+            <p class="titre">Global Citizens</p>
+            <p class="sous-titre">
+              Discover what we're doing to have a positive impact in the cities
+              we serve.
+            </p>
+            <a href="#" class="text-cta">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="applications__section">
+      <div class="container">
+        <h3>Find even more features in our apps</h3>
+        <div class="split">
+          <a data-aos="fade-right" href="#" class="app__card">
+            <span>Uber</span>
+            <p class="app__titre">
+              Download the app for drivers and couriers
+            </p>
+          </a>
+          <a data-aos="fade-left" href="#" class="app__card">
+            <span>Uber</span>
+            <p class="app__titre">Download the Uber app</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-dark">
+      <div class="container">
+        <nav>
+          <div><a href="#" class="logo">Parth Garg</a></div>
+          <div>
+            <a href="#">How Uber apps and website work</a>
+          </div>
+        </nav>
+      </div>
+    </footer>
+    <script>
+      AOS.init();
+
+      
+    </script>
+   
+  </body>
+
+</html>
